@@ -69,6 +69,7 @@
 	\DontPrintSemicolon
 	\SetKwFor{While}{while}{}{end while}
 \usepackage{nicefrac} %compact fractions
+\usepackage{siunitx} %SI units
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Misc commands and environments
