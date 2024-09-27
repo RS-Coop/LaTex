@@ -163,7 +163,9 @@
 \newenvironment{work}{\begin{tcolorbox}[breakable,colframe=lightgray]}{\end{tcolorbox}}
 
 %Problem environment
-\newenvironment{problem}[1]{\section*{Problem #1}}{}
+\newcounter{problemcounter}
+\setcounter{problemcounter}{1}
+\newenvironment{problem}[0]{\section*{Problem \theproblemcounter}}{\stepcounter{problemcounter}}
 \newenvironment{question}{\paragraph{Question:}}{} 
 \newenvironment{solution}{\paragraph{Solution:}~\\}{}
 

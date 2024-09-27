@@ -70,6 +70,10 @@
 	\SetKwFor{While}{while}{}{end while}
 \usepackage{nicefrac} %compact fractions
 \usepackage{siunitx} %SI units
+	\sisetup{group-separator={,},
+			separate-uncertainty=true,
+			round-pad=false,
+			round-mode=none}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Misc commands and environments
