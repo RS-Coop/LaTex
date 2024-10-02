@@ -19,6 +19,8 @@
 	\lhead{\@class}
 	\chead{Problem Set \@problemset}
 	\cfoot{\thepage}
+	
+\usepackage{titlesec}
 
 %Graphics
 \usepackage{graphicx} %for including images and other graphics
@@ -28,7 +30,7 @@
 	
 \usepackage{tabularx} %nice tables
 \usepackage{booktabs} %nice table styling
-	\renewcommand{\arraystretch}{1.5} %table cell spacing
+%	\renewcommand{\arraystretch}{1.5} %table cell spacing, but makes arrays awkwardly spaced
 
 \usepackage{tikz} %custom graphics
 	\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, calligraphy}
@@ -146,6 +148,12 @@
 \newcommand{\thickbar}[1]{\accentset{\rule{.4em}{.8pt}}{#1}}
 \newcommand{\st}{\ \text{s.t.}\ }
 
+\newcommand{\real}{\operatorname{Re}}
+\newcommand{\imag}{\operatorname{Im}}
+
+\newcommand{\dx}{\mathrm{d}} %integration
+\newcommand{\im}{\mathrm{i}} %imaginary number
+
 %Math environments
 \newtcbtheorem[]{theorem}{Theorem}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=theorem}{thm}
 \newtcbtheorem[]{lemma}{Lemma}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=lemma}{lem}
@@ -165,8 +173,6 @@
 %Problem environment
 \newcounter{problemcounter}
 \setcounter{problemcounter}{1}
-\newenvironment{problem}[0]{\section*{Problem \theproblemcounter}}{\stepcounter{problemcounter}}
-\newenvironment{question}{\paragraph{Question:}}{} 
-\newenvironment{solution}{\paragraph{Solution:}~\\}{}
-
-
+\newcommand{\problem}{\section*{Problem \theproblemcounter}\label{prob:\theproblemcounter}\stepcounter{problemcounter}}
+\newcommand{\question}{\paragraph{Question:}}
+\newcommand{\solution}{\paragraph{Solution:}~\\}
