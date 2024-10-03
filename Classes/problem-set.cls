@@ -16,7 +16,7 @@
 	\pagestyle{fancy}
 	\fancyhf{}
 	\rhead{\@author}
-	\lhead{\@class}
+	\lhead{\@classprefix}
 	\chead{Problem Set \@problemset}
 	\cfoot{\thepage}
 	
@@ -65,8 +65,10 @@
 %Misc commands and environments
 
 %Titling and stuff
-\newcommand\@class{}
-\newcommand\class[1]{\renewcommand\@class{#1}}
+\newcommand\@classprefix{}
+\newcommand\classprefix[1]{\renewcommand\@classprefix{#1}}
+\newcommand\@classname{}
+\newcommand\classname[1]{\renewcommand\@classname{#1}}
 
 \newcommand\@problemset{}
 \newcommand\problemset[1]{\renewcommand\@problemset{#1}}
@@ -97,7 +99,7 @@
 		\vskip 0.1in
 		\@toptitlebar
 		\centering
-		{\LARGE\bf \@class \vskip 0.1in \Large Problem Set \@problemset}
+		{\LARGE\bf \@classprefix: \@classname \vskip 0.1in \Large Problem Set \@problemset}
 		\@bottomtitlebar
 		\def\And{%
 		\end{tabular}\hfil\linebreak[0]\hfil%
