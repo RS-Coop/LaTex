@@ -36,6 +36,8 @@
 	\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, calligraphy}
 \usepackage[breakable, theorems]{tcolorbox} %colored boxes
 
+\usepackage{pdfpages}
+
 %References
 \usepackage[hidelinks, linktoc=all]{hyperref} %basic cross referencing
 \usepackage[capitalise]{cleveref} %better cross referencing
@@ -139,10 +141,11 @@
 \newcommand{\naturals}{\mathbb{N}}
 \newcommand{\integers}{\mathbb{Z}}
 \newcommand{\complex}{\mathbb{C}}
+\newcommand{\rationals}{\mathbb{Q}}
 \newcommand{\bigo}{\mathcal{O}}
 
 \newcommand{\inner}[2]{\langle #1,#2 \rangle} %inner product
-\newcommand{\Exp}{\mathbb{E}} %expectation
+\newcommand{\E}{\mathbb{E}} %expectation
 \newcommand{\argmax}{\text{argmax}}
 \newcommand{\id}{\mathbf{I}} %identity
 \newcommand{\set}[1]{\mathcal{\uppercase{#1}}}
@@ -150,11 +153,15 @@
 \newcommand{\thickbar}[1]{\accentset{\rule{.4em}{.8pt}}{#1}}
 \newcommand{\st}{\ \text{s.t.}\ }
 
-\newcommand{\real}{\operatorname{Re}}
-\newcommand{\imag}{\operatorname{Im}}
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\OO}{O}
+\DeclareMathOperator{\oo}{o}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
 
-\newcommand{\dx}{\mathrm{d}} %integration
-\newcommand{\im}{\mathrm{i}} %imaginary number
+\newcommand{\D}{\;\mathrm{d}} %integration
+\newcommand{\I}{\mathrm{i}} %imaginary number
 
 %Math environments
 \newtcbtheorem[]{theorem}{Theorem}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=theorem}{thm}
