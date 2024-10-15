@@ -62,6 +62,7 @@
 	\DontPrintSemicolon
 \usepackage{nicefrac} %compact fractions
 \usepackage{bm} %better bold math via \bm command
+\usepackage{mathdots}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Misc commands and environments
