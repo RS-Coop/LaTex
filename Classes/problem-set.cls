@@ -63,6 +63,11 @@
 \usepackage{nicefrac} %compact fractions
 \usepackage{bm} %better bold math via \bm command
 \usepackage{mathdots}
+\usepackage{siunitx}
+	\sisetup{group-separator={,},
+		separate-uncertainty=true,
+		round-pad=false,
+		round-mode=none}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Misc commands and environments
@@ -161,7 +166,7 @@
 \DeclareMathOperator{\real}{Re}
 \DeclareMathOperator{\imag}{Im}
 
-\newcommand{\D}{\;\mathrm{d}} %integration
+\newcommand{\D}{\mathrm{d}} %integration
 \newcommand{\I}{\mathrm{i}} %imaginary number
 
 %Math environments
