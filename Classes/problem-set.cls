@@ -142,6 +142,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Content commands and environments
 
+\newcommand{\edit}[1]{{\color{red} #1}}
+
 %Symbols and modifiers
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\naturals}{\mathbb{N}}
@@ -152,6 +154,7 @@
 
 \newcommand{\inner}[2]{\langle #1,#2 \rangle} %inner product
 \newcommand{\E}{\mathbb{E}} %expectation
+\newcommand{\V}{\mathbb{V}}
 \newcommand{\argmax}{\text{argmax}}
 \newcommand{\id}{\mathbf{I}} %identity
 \newcommand{\set}[1]{\mathcal{\uppercase{#1}}}
