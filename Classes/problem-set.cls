@@ -153,6 +153,7 @@
 \newcommand{\bigo}{\mathcal{O}}
 
 \newcommand{\inner}[2]{\langle #1,#2 \rangle} %inner product
+\newcommand{\prob}{\mathbb{P}}
 \newcommand{\E}{\mathbb{E}} %expectation
 \newcommand{\V}{\mathbb{V}}
 \newcommand{\argmax}{\text{argmax}}

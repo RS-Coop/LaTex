@@ -39,9 +39,11 @@
 \usepackage{tikz} %custom graphics
 \usepackage[breakable, theorems]{tcolorbox} %colored boxes
 
+\usepackage{adjustbox}
+
 %References
 \usepackage[hidelinks, linktoc=all]{hyperref} %basic cross referencing
-\usepackage[capitalise]{cleveref} %better cross referencing
+\usepackage[capitalise, nameinlink]{cleveref} %better cross referencing
 \usepackage{etoolbox} %appendix in cref
     \AtBeginEnvironment{appendices}{\crefalias{section}{appendix}}
 
@@ -179,17 +181,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Content commands and environments
 
+\newcommand{\edit}[1]{{\color{red} #1}}
+
 %Symbols and modifiers
 \newcommand{\reals}{\mathbb{R}}
 \newcommand{\naturals}{\mathbb{N}}
 \newcommand{\integers}{\mathbb{Z}}
 \newcommand{\complex}{\mathbb{C}}
+\newcommand{\rationals}{\mathbb{Q}}
 \newcommand{\bigo}{\mathcal{O}}
 
-\newcommand{\inner}[2]{\left\langle #1,#2 \rangle\right} %inner product
-\newcommand{\Exp}{\mathbb{E}} %expectation
+\newcommand{\inner}[2]{\langle #1,#2 \rangle} %inner product
+\newcommand{\prob}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}} %expectation
+\newcommand{\V}{\mathbb{V}}
 \newcommand{\argmax}{\text{argmax}}
 \newcommand{\id}{\mathbf{I}} %identity
+\newcommand{\set}[1]{\mathcal{\uppercase{#1}}}
+
+\newcommand{\thickbar}[1]{\accentset{\rule{.4em}{.8pt}}{#1}}
+\newcommand{\st}{\ \text{s.t.}\ }
+
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\OO}{O}
+\DeclareMathOperator{\oo}{o}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator{\real}{Re}
+\DeclareMathOperator{\imag}{Im}
+
+\newcommand{\D}{\mathrm{d}} %integration
+\newcommand{\I}{\mathrm{i}} %imaginary number
 
 %Math environments
 \newtcbtheorem[]{theorem}{Theorem}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=theorem}{thm}
