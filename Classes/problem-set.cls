@@ -157,6 +157,7 @@
 \newcommand{\E}{\mathbb{E}} %expectation
 \newcommand{\V}{\mathbb{V}}
 \newcommand{\argmax}{\text{argmax}}
+\newcommand{\argmin}{\text{argmin}}
 \newcommand{\id}{\mathbf{I}} %identity
 \newcommand{\set}[1]{\mathcal{\uppercase{#1}}}
 
