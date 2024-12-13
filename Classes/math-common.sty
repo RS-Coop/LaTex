@@ -1,0 +1,50 @@
+%Common mathematical setup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Packages and setup
+
+\usepackage{amsmath, amssymb, amsthm, amsfonts} %math symbols and environments
+\usepackage{bm} %better bold math via \bm command
+
+\usepackage{algorithm2e}
+	\RestyleAlgo{ruled}
+	\DontPrintSemicolon
+	\SetKwFor{While}{while}{}{end while}
+	
+\usepackage{nicefrac} %compact fractions
+
+\usepackage{siunitx} %SI units
+	\sisetup{group-separator={,},
+			separate-uncertainty=true,
+			round-pad=false,
+			round-mode=none}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Content commands and environments
+
+%Symbols and modifiers
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\naturals}{\mathbb{N}}
+
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\oo}{\mathcal{o}}
+
+\newcommand{\inner}[2]{\langle #1,#2 \rangle} %inner product
+
+\newcommand{\prob}{\mathbb{P}} %probability
+\newcommand{\E}{\mathbb{E}} %expectation
+\newcommand{\V}{\mathbb{V}} %variance
+
+\newcommand{\argmax}{\text{argmax}}
+
+\newcommand{\I}{\mathbf{I}} %identity
+
+\DeclareMathOperator{\e}{e} %exponential
+\DeclareMathOperator{\real}{Re} %real part
+\DeclareMathOperator{\imag}{Im} %imaginary part
+
+\newcommand{\D}[1]{\mathrm{d}\; #1} %integration
+\renewcommand{\i}{\mathrm{i}} %imaginary number

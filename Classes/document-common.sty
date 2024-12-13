@@ -1,0 +1,59 @@
+%Common document setup
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Packages and setup
+
+%Graphics
+\usepackage{graphicx} %for including images and other graphics
+\usepackage{subcaption} %side by side figures
+\usepackage{wrapfig} %text wrapped figures
+\usepackage{float} %figures
+	\floatstyle{boxed}
+
+\usepackage{tabularx} %nice tables
+\usepackage{booktabs} %nice table styling
+\usepackage{multirow, multicol}
+
+\usepackage{tikz} %custom graphics
+	\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, calligraphy}
+\usepackage[breakable, theorems]{tcolorbox} %colored boxes
+
+\usepackage{adjustbox}
+
+%Bibliography
+\usepackage[backend=biber,
+			maxcitenames=2,
+			style=numeric,
+			citestyle=numeric]{biblatex}
+
+%Styling
+\usepackage{csquotes} %normal quotes
+	\MakeOuterQuote{"}
+\usepackage{pifont} %cmark and xmark
+	\newcommand{\cmark}{\ding{51}}%
+	\newcommand{\xmark}{\ding{55}}%
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Custom citation commands
+
+%Cite authoryear style with hyperlinks inside square brackets
+\DeclareCiteCommand{\parencite}
+	{\boolfalse{citetracker}%
+		\boolfalse{pagetracker}%
+		\usebibmacro{prenote}}
+	{\ifciteindex
+		{\indexnames{labelname}}
+		{}%
+		[\printtext[bibhyperref]{\printnames{labelname}, \printfield{year}}]}
+	{\multicitedelim}
+	{\usebibmacro{postnote}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Misc
+
+\newcommand\@shorttitle{\thetitle}
+\newcommand\shorttitle[1]{\renewcommand\@shorttitle{#1}}
+
+\newcommand{\edit}[1]{{\color{red} #1}}

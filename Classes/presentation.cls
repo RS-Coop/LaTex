@@ -1,76 +1,12 @@
 \LoadClass{beamer}
 \ProvidesClass{Presentation}[Custom presentation class]
 
-\usepackage[utf8]{inputenc}
+\usepackage{document-common}
+\usepackage{math-common}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Packages and setup
 
-%Layout
-\usepackage{indentfirst} %indent first line after section
-
-%Graphics
-\usepackage{graphicx} %for including images and other graphics
-\usepackage{subcaption} %side by side figures
-\usepackage{float} %figures
-	\floatstyle{boxed}
-	
-\usepackage{tabularx} %nice tables
-\usepackage{booktabs} %nice table styling
-	\renewcommand{\arraystretch}{1.5} %table cell spacing
-
-\usepackage{tikz} %custom graphics
-	\usetikzlibrary{arrows.meta, positioning, decorations.pathreplacing, calligraphy}
-\usepackage[breakable, theorems]{tcolorbox} %colored boxes
-
-%References
-%\usepackage[capitalise]{cleveref} %better cross referencing
-
-%Bibliography
-\usepackage[backend=biber,
-			maxcitenames=2,
-			style=numeric,
-			citestyle=numeric]{biblatex}
-%	\addbibresource{ref.bib}
-
-%Styling
-\usepackage{csquotes} %normal quotes
-	\MakeOuterQuote{"}
-
-%Math
-\usepackage{amsmath, amssymb, amsthm, amsfonts} %math symbols and environments
-\usepackage{algorithm2e}
-	\RestyleAlgo{ruled}
-	\DontPrintSemicolon
-\usepackage{nicefrac} %compact fractions
-\usepackage{bm} %better bold math via \bm command
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Misc commands and environments
-
-%Titling and stuff
-\newcommand\@shorttitle{\thetitle}
-\newcommand\shorttitle[1]{\renewcommand\@shorttitle{#1}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Custom citation commands
-
-%Cite authoryear style with hyperlinks inside square brackets
-\DeclareCiteCommand{\parencite}
-	{\boolfalse{citetracker}%
-		\boolfalse{pagetracker}%
-		\usebibmacro{prenote}}
-	{\ifciteindex
-		{\indexnames{labelname}}
-		{}%
-		[\printtext[bibhyperref]{\printnames{labelname}, \printfield{year}}]}
-	{\multicitedelim}
-	{\usebibmacro{postnote}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Beamer style setup
-
 \definecolor{mainColor}{rgb}{0.1, 0.52, 0.24}
 \usetheme[named=mainColor]{Madrid}
 \usecolortheme{beaver}
@@ -110,23 +46,3 @@
 }
 
 \setbeamertemplate{navigation symbols}{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Content commands and environments
-
-%Symbols and modifiers
-\newcommand{\reals}{\mathbb{R}}
-\newcommand{\naturals}{\mathbb{N}}
-\newcommand{\integers}{\mathbb{Z}}
-\newcommand{\complex}{\mathbb{C}}
-\newcommand{\bigo}{\mathcal{O}}
-
-\newcommand{\inner}[2]{\langle #1,#2 \rangle} %inner product
-\newcommand{\Exp}{\mathbb{E}} %expectation
-\newcommand{\argmax}{\text{argmax}}
-\newcommand{\id}{\mathbf{I}} %identity
-\newcommand{\set}[1]{\mathcal{\uppercase{#1}}}
-
-\newcommand{\thickbar}[1]{\accentset{\rule{.4em}{.8pt}}{#1}}
-\newcommand{\st}{\ \text{s.t.}\ }
-

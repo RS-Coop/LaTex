@@ -1,0 +1,117 @@
+%Common paper setup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Packages and setup
+
+%Layout
+\usepackage{indentfirst} %indent first line after section
+
+\usepackage{titling} %retain title after maketitle
+
+\usepackage{fancyhdr} %page header
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{\@authors}
+	\lhead{\@shorttitle}
+	\cfoot{\thepage}
+	\rfoot{\@date}
+
+\usepackage{authblk} %multiple authors and affiliations
+\usepackage[page, toc, titletoc]{appendix} %appendices
+
+\usepackage{pdfpages}
+
+%References
+\usepackage[hidelinks, linktoc=all]{hyperref} %basic cross referencing
+\usepackage[capitalise, nameinlink]{cleveref} %better cross referencing
+\usepackage{etoolbox} %appendix in cref
+	\AtBeginEnvironment{appendices}{\crefalias{section}{appendix}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Titling
+%NOTE: The following were taken from the NeurIPS styling
+
+%Default fonts
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+
+%Title styling
+\newcommand{\@toptitlebar}{
+	\hrule height 4\p@
+	\vskip 0.25in
+	\vskip -\parskip
+}
+\newcommand{\@bottomtitlebar}{
+	\vskip 0.2in
+	\vskip -\parskip
+	\hrule height 2\p@
+	\vskip 0.1in
+}
+
+\renewcommand{\@maketitle}{
+	\vbox{
+		\hsize\textwidth
+		\linewidth\hsize
+		\vskip 0.1in
+		\@toptitlebar
+		\centering
+		{\LARGE\bf \@title\par}
+		\@bottomtitlebar
+		\def\And{%
+		\end{tabular}\hfil\linebreak[0]\hfil%
+		\begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+		}
+		\def\AND{
+		\end{tabular}\hfil\linebreak[4]\hfil
+		\begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces
+		}
+		\begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}
+		\@date
+		\vskip 0.3in \@minus 0.1in
+	}
+}
+
+%Abstract styling
+\renewenvironment{abstract}
+{
+	\vskip 0.1in
+	\centerline
+	{\large\bf Abstract}
+	\vspace{0.5ex}
+	\begin{quote}
+	}
+	{
+		\par
+	\end{quote}
+	\vskip 1ex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Math environments
+\newtcbtheorem[]{theorem}{Theorem}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=theorem}{thm}
+\newtcbtheorem[]{lemma}{Lemma}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=lemma}{lem}
+\newtcbtheorem[]{corollary}{Corollary}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=corollary}{cor}
+
+\newtcbtheorem[]{definition}{Definition}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=definition}{def}
+\crefname{example}{ex.}{exs.}
+\Crefname{Example}{Example}{Examples}
+
+\newtcbtheorem[]{example}{Example}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=example}{ex}
+\crefname{definition}{def.}{defs.}
+\Crefname{Definition}{Definition}{Definitions}
+
+\newtcbtheorem[]{assumption}{Assumption}{fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=assumption}{asp}
+\crefname{assumption}{asp.}{asps.}
+\Crefname{Assumption}{Assumption}{Assumptions}
+
+\crefname{algocf}{alg.}{algs.}
+\Crefname{algocf}{Algorithm}{Algorithms}
+
+\renewcommand{\qedsymbol}{$\blacktriangle$}
+\renewcommand{\proofname}{\nopunct}
+\tcolorboxenvironment{proof}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,title=Proof}
+
+\newenvironment{work}{\begin{tcolorbox}[breakable,colframe=lightgray]}{\end{tcolorbox}}
+
+%Foonotes
+\crefformat{footnote}{#2\footnotemark[#1]#3} %https://tex.stackexchange.com/questions/10102/multiple-references-to-the-same-footnote-with-hyperref-support-is-there-a-bett/10116#10116
