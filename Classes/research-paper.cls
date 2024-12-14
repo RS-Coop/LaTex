@@ -2,8 +2,8 @@
 \ProvidesClass{research-paper}[Custom research paper class]
 
 \usepackage{document-common}
-\usepackage{paper-common}
 \usepackage{math-common}
+\usepackage{paper-common}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
