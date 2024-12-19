@@ -2,8 +2,8 @@
 \ProvidesClass{problem-set}[Custom problem set class]
 
 \usepackage{document-common}
-\usepackage{paper-common}
 \usepackage{math-common}
+\usepackage{paper-common}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
