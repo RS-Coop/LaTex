@@ -16,7 +16,6 @@
 \lhead{\@shorttitle}
 \rhead{\@authors}
 \cfoot{\thepage}
-\rfoot{\@date}
 
 %Titling
 

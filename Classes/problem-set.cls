@@ -17,7 +17,6 @@
 \chead{\@subtitle}
 \rhead{\@author}
 \cfoot{\thepage}
-\rfoot{\@date}
 
 %Titling
 \renewcommand{\@title}{\@classprefix: \@classname \vskip 0.1in \Large \@subtitle}
