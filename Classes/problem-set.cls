@@ -19,6 +19,8 @@
 \cfoot{\thepage}
 
 %Titling
+\usepackage{titlesec} %For problem to section alterations
+
 \renewcommand{\@title}{\@classprefix: \@classname \vskip 0.1in \Large \@subtitle}
 
 \newcommand\@classprefix{}
@@ -35,9 +37,11 @@
 	\onehalfspacing %1.5 line spacing
 	
 %Problem environment
-\newcounter{problemcounter}
-\setcounter{problemcounter}{1}
-\newcommand{\problem}{\section*{Problem \theproblemcounter}\label{prob:\theproblemcounter}\stepcounter{problemcounter}}
+\titlelabel{Problem \thesection \label{prob:\thesection}}
+\newcommand{\problem}{\section{}}
+\crefname{section}{problem}{problems}
+\Crefname{Section}{Problem}{Problems}
+
 \newcommand{\question}{\paragraph{Question:}}
 \newcommand{\solution}{\paragraph{Solution:}~\\}
 
