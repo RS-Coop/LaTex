@@ -39,8 +39,8 @@
 %Problem environment
 \titlelabel{Problem \thesection \label{prob:\thesection}}
 \newcommand{\problem}{\section{}}
-\crefname{section}{problem}{problems}
-\Crefname{Section}{Problem}{Problems}
+\crefname{section}{Problem}{Problems}
+\Crefname{section}{Problem}{Problems}
 
 \newcommand{\question}{\paragraph{Question:}}
 \newcommand{\solution}{\paragraph{Solution:}~\\}
