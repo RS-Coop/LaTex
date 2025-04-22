@@ -39,10 +39,10 @@
 
 \newcommand{\inner}[2]{\left\langle #1,#2 \right\rangle} %inner product
 
-\newcommand{\prob}{\mathbb{P}} %probability
-\newcommand{\E}{\mathbb{E}} %expectation
-\newcommand{\V}{\mathbb{V}} %variance
-\newcommand{\CV}{\mathbb{CV}} %covariance
+\newcommand{\prob}[1]{\mathbb{P}\left[#1\right]} %probability
+\newcommand{\E}[1]{\mathbb{E}\left[#1\right]} %expectation
+\newcommand{\V}[1]{\mathbb{V}\left[#1\right]} %variance
+\newcommand{\CV}[2]{\mathbb{CV}\left[#1,#2\right]} %covariance
 
 \newcommand{\argmin}{\operatorname{argmin}}
 \newcommand{\argmax}{\operatorname{argmax}}
@@ -53,7 +53,7 @@
 \DeclareMathOperator{\real}{Re} %real part
 \DeclareMathOperator{\imag}{Im} %imaginary part
 
-\newcommand{\D}[1]{\; \mathrm{d} #1} %integration
+\newcommand{\D}[1]{\mathrm{d} #1} %integration
 \newcommand{\im}{\mathrm{i}} %imaginary number
 
 \newcommand{\sign}{\operatorname{sign}}
