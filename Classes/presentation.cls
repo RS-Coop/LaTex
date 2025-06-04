@@ -1,4 +1,4 @@
-\LoadClass{beamer}
+\LoadClass[notheorems]{beamer}
 \ProvidesClass{Presentation}[Custom presentation class]
 
 \usepackage{document-common}
@@ -30,13 +30,13 @@
 {
 	\leavevmode%
 	\hbox{%
-		\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
 			\usebeamerfont{author in head/foot}\insertauthor
 		\end{beamercolorbox}%
-		\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+		\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
 			\usebeamerfont{title in head/foot}\@shorttitle
 		\end{beamercolorbox}%
-		\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{institute in head/foot}%
+		\begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,center]{institute in head/foot}%
 			\usebeamerfont{institute in head/foot}\insertinstitute
 		\end{beamercolorbox}%
 		\begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
@@ -46,3 +46,16 @@
 }
 
 \setbeamertemplate{navigation symbols}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Math environments
+\newtcbtheorem[]{theorem}{Theorem}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=theorem}{thm}
+\newtcbtheorem[]{lemma}{Lemma}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=lemma}{lem}
+\newtcbtheorem[]{corollary}{Corollary}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=corollary}{cor}
+
+\newtcbtheorem[]{example}{Example}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=example}{ex}
+
+\newtcbtheorem[]{definition}{Definition}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=definition}{def}
+
+\newtcbtheorem[]{assumption}{Assumption}{breakable,fonttitle=\bfseries,colframe=lightgray,coltitle=black,label type=assumption}{asp}
+
